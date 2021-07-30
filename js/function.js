@@ -1,6 +1,6 @@
 
 var my_home = document.querySelectorAll('.h1');
-var Titles = ["WELCOME TO MY SITE", "ABOUT ME", "MY SKILLS"];
+var Titles = ["WELCOME TO MY SITE", "ABOUT ME", "MY SKILLS", "MY WORK", "CONTACT"];
 
 for(var i=0; i<my_home.length; ++i){
     if(i < Titles.length){
