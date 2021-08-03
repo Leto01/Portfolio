@@ -15,6 +15,29 @@ section{
 
 }
 
+a.x::before{
+    content: "";
+    position: absolute;
+    height: 0.2em;
+    width: 5em;
+    background: linear-gradient(
+        to right,
+        #fd004c,#fd0000,
+        #fe9000,#feba00,
+        #fff020,#d6ff20,
+        #3edf4b,#3edfa1,
+        #3363ff,#7033ff,
+        #b102b7,#b70272
+    );
+    background-size: 200% 100%;
+    bottom: -0.1em;
+    transition: 0.5s;
+}
+
+.x:hover::before{
+    background-position: 100% 0;
+}
+
 body{
     height: 100%;
     background: linear-gradient(-45deg, #fc51ff, #3d2979);
@@ -26,6 +49,7 @@ body{
     //overflow:hidden;
 }
 
+/*
 .glowing{
     position: absolute;
     width: 750px;
@@ -106,7 +130,7 @@ body{
         transform: rotate(360deg);
     }
 }
-
+*/
 .my_Name{
     color: wheat;
     font-family: sans-serif;

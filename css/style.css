@@ -14,108 +14,110 @@ section {
   height: 50px !important;
 }
 
+a.x::before {
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  width: 5em;
+  background: -webkit-gradient(linear, left top, right top, from(#fd004c), color-stop(#fd0000), color-stop(#fe9000), color-stop(#feba00), color-stop(#fff020), color-stop(#d6ff20), color-stop(#3edf4b), color-stop(#3edfa1), color-stop(#3363ff), color-stop(#7033ff), color-stop(#b102b7), to(#b70272));
+  background: linear-gradient(to right, #fd004c, #fd0000, #fe9000, #feba00, #fff020, #d6ff20, #3edf4b, #3edfa1, #3363ff, #7033ff, #b102b7, #b70272);
+  background-size: 200% 100%;
+  bottom: -0.1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.x:hover::before {
+  background-position: 100% 0;
+}
+
 body {
   height: 100%;
   background: linear-gradient(-45deg, #fc51ff, #3d2979);
 }
 
-.glowing {
-  position: absolute;
-  width: 750px;
-  height: 750px;
+/*
+.glowing{
+    position: absolute;
+    width: 750px;
+    height: 750px;
 }
 
-.glowing span {
-  position: absolute;
-  top: calc(80px * var(--i));
-  left: calc(80px * var(--i));
-  bottom: calc(80px * var(--i));
-  right: calc(80px * var(--i));
+.glowing span{
+    position:absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
 }
 
-.glowing span::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -8px;
-  width: 15px;
-  height: 15px;
-  background: #f00;
-  border-radius: 50%;
+.glowing span::before{
+    content: '';
+    position:absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
 }
 
-.glowing span:nth-child(3n + 1):before {
-  background: #86ff00;
-  -webkit-box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 8px rgba(134, 255, 0, 0.1);
-          box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 8px rgba(134, 255, 0, 0.1);
+.glowing span:nth-child(3n + 1):before{
+    background: rgba(134,255,0, 1);
+    box-shadow: 0 0 20px rgba(134,255,0, 1),
+    0 0 40px rgba(134,255,0, 1),
+    0 0 60px rgba(134,255,0, 1),
+    0 0 80px rgba(134,255,0, 1),
+    0 0 0 8px rgba(134,255,0, .1);
 }
 
-.glowing span:nth-child(3n + 2):before {
-  background: #ffd600;
-  -webkit-box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 8px rgba(255, 214, 0, 0.1);
-          box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 8px rgba(255, 214, 0, 0.1);
+.glowing span:nth-child(3n + 2):before{
+    background: rgba(255,214,0, 1);
+    box-shadow: 0 0 20px rgba(255,214,0, 1),
+    0 0 40px rgba(255,214,0, 1),
+    0 0 60px rgba(255,214,0, 1),
+    0 0 80px rgba(255,214,0, 1),
+    0 0 0 8px rgba(255,214,0, .1);
 }
 
-.glowing span:nth-child(3n + 3):before {
-  background: #00e2ff;
-  -webkit-box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0, 226, 255, 0.1);
-          box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0, 226, 255, 0.1);
+.glowing span:nth-child(3n + 3):before{
+    background: rgba(0,226,255, 1);
+    box-shadow: 0 0 20px rgba(0,226,255, 1),
+    0 0 40px rgba(0,226,255, 1),
+    0 0 60px rgba(0,226,255, 1),
+    0 0 80px rgba(0,226,255, 1),
+    0 0 0 8px rgba(0,226,255, .1);
 }
 
-.glowing span:nth-child(3n + 1)::before {
-  -webkit-animation: animate 10s alternate infinite;
-          animation: animate 10s alternate infinite;
+.glowing span:nth-child(3n + 1)::before{
+    animation: animate 10s alternate infinite;
 }
 
-.glowing span:nth-child(3n + 2)::before {
-  -webkit-animation: animate-reverse 10s alternate infinite;
-          animation: animate-reverse 10s alternate infinite;
+.glowing span:nth-child(3n + 2)::before{
+    animation: animate-reverse 10s alternate infinite;
 }
 
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
-@keyframes animate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+@keyframes animate-reverse
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
-
-@-webkit-keyframes animate-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
+*/
 .my_Name {
   color: wheat;
   font-family: sans-serif;
