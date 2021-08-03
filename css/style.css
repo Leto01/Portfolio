@@ -20,7 +20,7 @@ body {
 }
 
 .glowing {
-  position: relative;
+  position: absolute;
   width: 750px;
   height: 750px;
 }
@@ -62,12 +62,12 @@ body {
           box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0, 226, 255, 0.1);
 }
 
-.glowing span::nth-child(3n + 1):before {
+.glowing span:nth-child(3n + 1)::before {
   -webkit-animation: animate 10s alternate infinite;
           animation: animate 10s alternate infinite;
 }
 
-.glowing span:nth-child(3n + 2):before {
+.glowing span:nth-child(3n + 2)::before {
   -webkit-animation: animate-reverse 10s alternate infinite;
           animation: animate-reverse 10s alternate infinite;
 }

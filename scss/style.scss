@@ -12,8 +12,8 @@ section{
 
 .navi{
     height: 50px!important;
-}
 
+}
 
 body{
     height: 100%;
@@ -27,7 +27,7 @@ body{
 }
 
 .glowing{
-    position: relative;
+    position: absolute;
     width: 750px;
     height: 750px;
 }
@@ -78,11 +78,11 @@ body{
     0 0 0 8px rgba(0,226,255, .1);
 }
 
-.glowing span::nth-child(3n + 1):before{
+.glowing span:nth-child(3n + 1)::before{
     animation: animate 10s alternate infinite;
 }
 
-.glowing span:nth-child(3n + 2):before{
+.glowing span:nth-child(3n + 2)::before{
     animation: animate-reverse 10s alternate infinite;
 }
 
