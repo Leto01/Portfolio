@@ -15,6 +15,19 @@ section{
 
 }
 
+#background_text_1{
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+    color: wheat;
+    font-family: sans-serif;
+    font-size: 70pt;
+    cursor: default;
+}
+
 a.x::before{
     content: "";
     position: absolute;
@@ -42,7 +55,7 @@ a.x::before{
 
 body{
     height: 100%;
-    background: linear-gradient(-45deg, #fc51ff, #3d2979);
+    background: linear-gradient(-45deg, #fb2dff, #372470);
 }
 
 .my_Name{
@@ -59,13 +72,14 @@ body{
     color: wheat;
     font-family: sans-serif;
     font-size: 70pt;
-    
+    cursor: default;
 }
 
 p{
     color: wheat;
     font-family: sans-serif;
     font-size: 32pt;
+    cursor: default;
 }
 
 #spacer{
