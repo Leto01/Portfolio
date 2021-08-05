@@ -17,15 +17,22 @@ section{
 
 #background_text_1{
     position: absolute;
-    top: 30%;
+    top: 60% !important;
+    transform: translateY(-50%);
     bottom: 0;
-    right: 0;
+    
+    //left: 1%;
     z-index: -1;
     overflow: hidden;
-    color: wheat;
+    color: rgb(139, 108, 151);
     font-family: sans-serif;
-    font-size: 70pt;
+    font-size: 160pt;
     cursor: default;
+    opacity: 0.2;
+}
+
+#sec_home{
+    text-align: center;
 }
 
 a.x::before{
@@ -61,12 +68,40 @@ body{
 .my_Name{
     color: wheat;
     font-family: sans-serif;
+    padding-top: 12px;
     letter-spacing: 3px;
     font-size: 16pt;
     font-weight: bold;
     text-decoration: none;
     float: right;
 }
+
+.line-1{
+    //position: relative;
+ 
+
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+
+
+    white-space: nowrap;
+    overflow: hidden;
+ 
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(22) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 200px;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
 
 .h1{
     color: wheat;
